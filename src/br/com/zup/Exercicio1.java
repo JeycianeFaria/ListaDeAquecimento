@@ -12,12 +12,13 @@ public class Exercicio1 {
         Map<String,Double> listaDeProdutos = new HashMap<String,Double>();
 
         //variaveis
-        String nomeProduto;
+        boolean exibirmenu = true;
         double precoProduto;
         int decisaomenu;
-        boolean exibirmenu = true;
-        String produtoParaExcluir;
         String excluirProduto = "";
+        String nomeProduto;
+        String produtoParaExcluir;
+
 
         System.out.println("------Lojinha do João------");
         System.out.println("Bem vindo João!");
