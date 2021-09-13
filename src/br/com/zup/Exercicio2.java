@@ -13,8 +13,8 @@ public class Exercicio2 {
         Map<Long, Double> listaCandidatos = new HashMap<Long, Double>();
 
         //variaveis
-        String numeroMatricula;
-        String notaCandidato;
+        long numeroMatricula;
+        double notaCandidato;
         int opcaoSelecionada = 0;
         boolean exibicaoMenu = true;
 
@@ -30,7 +30,13 @@ public class Exercicio2 {
             opcaoSelecionada = leitor.nextInt();
 
             if (opcaoSelecionada == 1) {
-                //cadastrar
+                System.out.println("------Cadastrar candidato e nota------");
+                System.out.println("Digite o número de matricula do candidato:");
+                numeroMatricula = leitor.nextLong();
+                System.out.println("Digite a nota do candidato:");
+                notaCandidato = leitor.nextDouble();
+
+                listaCandidatos.put(numeroMatricula,notaCandidato);
 
             } else if (opcaoSelecionada == 2) {
 
@@ -42,7 +48,8 @@ public class Exercicio2 {
 
             } else if (opcaoSelecionada == 4) {
 
-                //sair
+                exibicaoMenu = false;
+                System.out.println("Até a proxima!");
 
             } else {
                 System.out.println("Opção selecionada inválida!");
