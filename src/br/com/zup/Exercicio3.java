@@ -27,10 +27,17 @@ public class Exercicio3 {
              opcaoMenu = leitor.nextInt();
 
              if (opcaoMenu == 1){
+                 System.out.println("Cadastrar novos pratos");
+                 System.out.println("Digite o nome do Prato");
+                 nomeDoPrato = leitor.nextLine();
+                 System.out.println("Digite os ingrediente do Prato separados por ','");
+                 ingredientesDoPrato = leitor.nextLine();
 
+                 cardapio.put(nomeDoPrato, ingredientesDoPrato);
 
 
              }else if(opcaoMenu == 2){
+
 
              }else if (opcaoMenu == 3){
 
