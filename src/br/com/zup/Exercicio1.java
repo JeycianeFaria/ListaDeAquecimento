@@ -16,6 +16,8 @@ public class Exercicio1 {
         double precoProduto;
         int decisaomenu;
         boolean exibirmenu = true;
+        String produtoParaExcluir;
+        String excluirProduto = "";
 
         System.out.println("------Lojinha do João------");
         System.out.println("Bem vindo João!");
@@ -55,12 +57,22 @@ public class Exercicio1 {
 
                     }
 
-
                     break;
                 case 3:
                     //excluir produtos
                     System.out.println("------Excluir Produtos------");
+                    System.out.println("Digite qual o produto que você quer excluir:");
+                    produtoParaExcluir = leitor.nextLine();
 
+
+                    for (String excluir: listaDeProdutos.keySet()) {
+                        if(excluir.equals(produtoParaExcluir)){
+                            excluirProduto = produtoParaExcluir;
+                            break;
+                        }
+                    }
+
+                    listaDeProdutos.remove(excluirProduto);
 
                     break;
                 case 4:
