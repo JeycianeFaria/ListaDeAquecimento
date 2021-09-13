@@ -28,6 +28,7 @@ public class Exercicio1 {
             System.out.println("3- Excluir produto.");
             System.out.println("4- Sair.");
             decisaomenu = leitor.nextInt();
+            leitor.nextLine();
 
 
 
@@ -35,7 +36,12 @@ public class Exercicio1 {
                 case 1:
                     //cadastrar produto
                     System.out.println("------Cadastrar Novo Produto------");
-                    System.out.println("");
+                    System.out.println("Digite o nome do produto.");
+                    nomeProduto = leitor.nextLine();
+                    System.out.println("Digite o preço do produto.");
+                    precoProduto = leitor.nextDouble();
+
+                    listaDeProdutos.put(nomeProduto,precoProduto);
 
 
                     break;
@@ -58,6 +64,7 @@ public class Exercicio1 {
                     break;
                 default:
                     //numero digitado incorreto
+                    System.out.println("Você digitou um valor inválido, digite novamente!");
                     break;
             }
 
