@@ -49,6 +49,12 @@ public class Exercicio1 {
                     //exibir lista de produtos
                     System.out.println("------Produtos Cadastrados!-----");
 
+                    for (String produtos: listaDeProdutos.keySet()) {
+
+                        System.out.println("Produto: " + produtos + " Valor : R$ " + listaDeProdutos.get(produtos));
+
+                    }
+
 
                     break;
                 case 3:
