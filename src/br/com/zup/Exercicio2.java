@@ -17,6 +17,8 @@ public class Exercicio2 {
         double notaCandidato = 0;
         int opcaoSelecionada = 0;
         boolean exibicaoMenu = true;
+        long matriculaCandidato = 0;
+        long excluirCandidato = 0;
 
         System.out.println("------Bem-vindo a Lista Canditados VestCode------");
 
@@ -52,7 +54,17 @@ public class Exercicio2 {
 
             } else if (opcaoSelecionada == 3) {
 
-                //excluir candidato
+                System.out.println("Digite o número de matricula que deseja excluir:");
+                matriculaCandidato = leitor.nextLong();
+
+                for (Long excluirMatricula: listaCandidatos.keySet()) {
+                    if (excluirMatricula.equals(matriculaCandidato)){
+                        excluirCandidato = matriculaCandidato;
+                        break;
+                    }
+                }
+
+                listaCandidatos.remove(excluirCandidato);
 
             } else if (opcaoSelecionada == 4) {
 
