@@ -13,8 +13,8 @@ public class Exercicio2 {
         Map<Long, Double> listaCandidatos = new HashMap<Long, Double>();
 
         //variaveis
-        long numeroMatricula;
-        double notaCandidato;
+        long numeroMatricula = 0;
+        double notaCandidato = 0;
         int opcaoSelecionada = 0;
         boolean exibicaoMenu = true;
 
@@ -38,9 +38,17 @@ public class Exercicio2 {
 
                 listaCandidatos.put(numeroMatricula,notaCandidato);
 
+                System.out.println("Candidato cadastrado com sucesso!");
+
+
+
             } else if (opcaoSelecionada == 2) {
 
-                //exibir lista
+                System.out.println("------Lista de Candidatos e Notas------");
+
+                for (Long canditadosCadastrados: listaCandidatos.keySet()) {
+                    System.out.println("Matricula: " + canditadosCadastrados + " Nota: " + listaCandidatos.get(canditadosCadastrados));
+                }
 
             } else if (opcaoSelecionada == 3) {
 
@@ -54,7 +62,6 @@ public class Exercicio2 {
             } else {
                 System.out.println("Opção selecionada inválida!");
             }
-
 
         } while (exibicaoMenu);
 
