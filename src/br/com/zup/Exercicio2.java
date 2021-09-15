@@ -13,14 +13,14 @@ public class Exercicio2 {
         Map<Long, Double> listaCandidatos = new HashMap<Long, Double>();
 
         //variaveis
-        long numeroMatricula = 0;
+        boolean exibicaoMenu = true;
         double notaCandidato = 0;
         int opcaoSelecionada = 0;
-        boolean exibicaoMenu = true;
-        long matriculaCandidato = 0;
         long excluirCandidato = 0;
+        long matriculaCandidato = 0;
+        long numeroMatricula = 0;
 
-        System.out.println("------Bem-vindo a Lista Canditados VestCode------");
+        System.out.println("\n------Bem-vindo a Lista Canditados VestCode------\n");
 
         do {
             System.out.println("O que deseja fazer?");
@@ -32,7 +32,7 @@ public class Exercicio2 {
             opcaoSelecionada = leitor.nextInt();
 
             if (opcaoSelecionada == 1) {
-                System.out.println("------Cadastrar candidato e nota------");
+                System.out.println("\n------Cadastrar candidato e nota------\n");
                 System.out.println("Digite o número de matricula do candidato:");
                 numeroMatricula = leitor.nextLong();
                 System.out.println("Digite a nota do candidato:");
@@ -40,16 +40,16 @@ public class Exercicio2 {
 
                 listaCandidatos.put(numeroMatricula,notaCandidato);
 
-                System.out.println("Candidato cadastrado com sucesso!");
+                System.out.println("\nCandidato cadastrado com sucesso!\n");
 
 
 
             } else if (opcaoSelecionada == 2) {
 
-                System.out.println("------Lista de Candidatos e Notas------");
+                System.out.println("\n------Lista de Candidatos e Notas------\n");
 
                 for (Long canditadosCadastrados: listaCandidatos.keySet()) {
-                    System.out.println("Matricula: " + canditadosCadastrados + " Nota: " + listaCandidatos.get(canditadosCadastrados));
+                    System.out.println("Matricula: " + canditadosCadastrados + "\t || Nota: " + listaCandidatos.get(canditadosCadastrados));
                 }
 
             } else if (opcaoSelecionada == 3) {
@@ -66,13 +66,15 @@ public class Exercicio2 {
 
                 listaCandidatos.remove(excluirCandidato);
 
+                System.out.println("\nCandidato excluído com sucesso!\n");
+
             } else if (opcaoSelecionada == 4) {
 
                 exibicaoMenu = false;
                 System.out.println("Até a proxima!");
 
             } else {
-                System.out.println("Opção selecionada inválida!");
+                System.out.println("\nOpção selecionada inválida!\n");
             }
 
         } while (exibicaoMenu);

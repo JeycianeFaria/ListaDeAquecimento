@@ -20,7 +20,7 @@ public class Exercicio1 {
         String produtoParaExcluir;
 
 
-        System.out.println("------Lojinha do João------");
+        System.out.println("\n------Lojinha do João------\n");
         System.out.println("Bem vindo João!");
 
         while (exibirmenu){
@@ -38,30 +38,33 @@ public class Exercicio1 {
             switch (decisaomenu){
                 case 1:
                     //cadastrar produto
-                    System.out.println("------Cadastrar Novo Produto------");
-                    System.out.println("Digite o nome do produto.");
+                    System.out.println("\n------Cadastrar Novo Produto------\n");
+                    System.out.println("Digite o nome do produto: ");
                     nomeProduto = leitor.nextLine();
-                    System.out.println("Digite o preço do produto.");
+                    System.out.println("Digite o preço do produto: ");
                     precoProduto = leitor.nextDouble();
 
                     listaDeProdutos.put(nomeProduto,precoProduto);
 
+                    System.out.println("\nProduto cadastrado com  sucesso!\n");
 
                     break;
+
                 case 2:
                     //exibir lista de produtos
-                    System.out.println("------Produtos Cadastrados!-----");
+                    System.out.println("\n------Produtos Cadastrados!-----\n");
 
                     for (String produtos: listaDeProdutos.keySet()) {
 
-                        System.out.println("Produto: " + produtos + " Valor : R$ " + listaDeProdutos.get(produtos));
+                        System.out.println("Produto: " + produtos + "\t || Valor : R$ " + listaDeProdutos.get(produtos) + "\n");
 
                     }
 
                     break;
+
                 case 3:
                     //excluir produtos
-                    System.out.println("------Excluir Produtos------");
+                    System.out.println("\n------Excluir Produtos------\n");
                     System.out.println("Digite qual o produto que você quer excluir:");
                     produtoParaExcluir = leitor.nextLine();
 
@@ -75,19 +78,26 @@ public class Exercicio1 {
 
                     listaDeProdutos.remove(excluirProduto);
 
-                    break;
-                case 4:
-                    exibirmenu = false;
-                    System.out.println("Até a proxima!");
+                    System.out.println("\nProduto excluído com sucesso!\n");
 
                     break;
+
+                case 4:
+                    exibirmenu = false;
+                    System.out.println("\nAté a proxima!");
+
+                    break;
+
                 default:
                     //numero digitado incorreto
-                    System.out.println("Você digitou um valor inválido, digite novamente!");
+                    System.out.println("\nVocê digitou um valor inválido, digite novamente!\n");
+
                     break;
+
             }
 
         }
+
     }
 
 }

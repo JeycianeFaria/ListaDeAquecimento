@@ -11,16 +11,17 @@ public class Exercicio3 {
         Scanner leitor = new Scanner(System.in);
         Map<String, String> cardapio = new HashMap<String,String>();
 
-        String nomeDoPrato = "";
-        String ingredientesDoPrato = "";
         boolean exibirMenu = true;
-        String exemplo;
         int opcaoMenu = 0;
-        String excluirPrato;
         String excluir;
+        String excluirPrato;
+        String exemplo;
+        String ingredientesDoPrato = "";
+        String nomeDoPrato = "";
 
          while (exibirMenu){
-             System.out.println("------ Restaurante MataFome ------");
+
+             System.out.println("\n------ Restaurante MataFome ------\n");
              System.out.println("O que você deseja fazer? ");
              System.out.println("1- Adicionar novo prato?");
              System.out.println("2- Exibir o cardápio do restaurante?");
@@ -30,7 +31,8 @@ public class Exercicio3 {
              leitor.nextLine();
 
              if (opcaoMenu == 1){
-                 System.out.println("Cadastrar novos pratos");
+
+                 System.out.println("\nCadastrar novos pratos\n");
                  System.out.println("Digite o nome do Prato");
                  nomeDoPrato = leitor.nextLine();
                  System.out.println("Digite os ingrediente do Prato separados por ','");
@@ -38,10 +40,13 @@ public class Exercicio3 {
 
                  cardapio.put(nomeDoPrato, ingredientesDoPrato);
 
+                 System.out.println("\nPrato cadastrado com sucesso!\n");
+
 
              }else if(opcaoMenu == 2){
+
                 for (String exibircardapio:cardapio.keySet()){
-                    System.out.println(exibircardapio + "\t || Ingredientes: " + cardapio.get(exibircardapio));
+                    System.out.println("\nPrato: " + exibircardapio + "\t || Ingredientes: " + cardapio.get(exibircardapio));
                 }
 
              }else if (opcaoMenu == 3){
@@ -57,10 +62,13 @@ public class Exercicio3 {
 
                  cardapio.remove(excluirPrato);
 
+                 System.out.println("\nPrato excluído com sucesso!\n");
 
              }else if (opcaoMenu == 4){
+
                 exibirMenu = false;
-                 System.out.println("Até a proxima!");
+                System.out.println("Até a proxima!");
+
              }else {
                  System.out.println("Opção selecionada inválida!");
              }
